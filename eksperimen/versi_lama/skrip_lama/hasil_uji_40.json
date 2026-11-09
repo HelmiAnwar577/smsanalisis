@@ -1,0 +1,574 @@
+{
+ "confusion": {
+  "tp": 40,
+  "fn": 0,
+  "fp": 40,
+  "tn": 0
+ },
+ "akurasi": 50.0,
+ "presisi": 50.0,
+ "recall": 100.0,
+ "f1": 6666.666666666667,
+ "baris": [
+  {
+   "no": 1,
+   "jenis": "Penipuan",
+   "skor": 78,
+   "status": "BERBAHAYA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 2,
+   "jenis": "Penipuan",
+   "skor": 68,
+   "status": "BERBAHAYA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 3,
+   "jenis": "Penipuan",
+   "skor": 65,
+   "status": "WASPADA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 4,
+   "jenis": "Penipuan",
+   "skor": 67,
+   "status": "BERBAHAYA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 5,
+   "jenis": "Penipuan",
+   "skor": 33,
+   "status": "WASPADA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 6,
+   "jenis": "Penipuan",
+   "skor": 30,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 7,
+   "jenis": "Penipuan",
+   "skor": 33,
+   "status": "WASPADA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 8,
+   "jenis": "Penipuan",
+   "skor": 5,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 9,
+   "jenis": "Penipuan",
+   "skor": 0,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 10,
+   "jenis": "Penipuan",
+   "skor": 4,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 11,
+   "jenis": "Penipuan",
+   "skor": 64,
+   "status": "WASPADA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 12,
+   "jenis": "Penipuan",
+   "skor": 5,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 13,
+   "jenis": "Penipuan",
+   "skor": 63,
+   "status": "WASPADA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 14,
+   "jenis": "Penipuan",
+   "skor": 54,
+   "status": "WASPADA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 15,
+   "jenis": "Penipuan",
+   "skor": 6,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 16,
+   "jenis": "Penipuan",
+   "skor": 29,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 17,
+   "jenis": "Penipuan",
+   "skor": 30,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 18,
+   "jenis": "Penipuan",
+   "skor": 70,
+   "status": "BERBAHAYA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 19,
+   "jenis": "Penipuan",
+   "skor": 28,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 20,
+   "jenis": "Penipuan",
+   "skor": 25,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 21,
+   "jenis": "Penipuan",
+   "skor": 36,
+   "status": "WASPADA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 22,
+   "jenis": "Penipuan",
+   "skor": 65,
+   "status": "WASPADA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 23,
+   "jenis": "Penipuan",
+   "skor": 54,
+   "status": "WASPADA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 24,
+   "jenis": "Penipuan",
+   "skor": 29,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 25,
+   "jenis": "Penipuan",
+   "skor": 66,
+   "status": "BERBAHAYA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 26,
+   "jenis": "Penipuan",
+   "skor": 30,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 27,
+   "jenis": "Penipuan",
+   "skor": 30,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 28,
+   "jenis": "Penipuan",
+   "skor": 59,
+   "status": "WASPADA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 29,
+   "jenis": "Penipuan",
+   "skor": 20,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 30,
+   "jenis": "Penipuan",
+   "skor": 5,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 31,
+   "jenis": "Penipuan",
+   "skor": 10,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 32,
+   "jenis": "Penipuan",
+   "skor": 30,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 33,
+   "jenis": "Penipuan",
+   "skor": 30,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 34,
+   "jenis": "Penipuan",
+   "skor": 10,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 35,
+   "jenis": "Penipuan",
+   "skor": 0,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 36,
+   "jenis": "Penipuan",
+   "skor": 10,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 37,
+   "jenis": "Penipuan",
+   "skor": 30,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 38,
+   "jenis": "Penipuan",
+   "skor": 11,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 39,
+   "jenis": "Penipuan",
+   "skor": 29,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 40,
+   "jenis": "Penipuan",
+   "skor": 27,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 41,
+   "jenis": "Sah",
+   "skor": 0,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 42,
+   "jenis": "Sah",
+   "skor": 5,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 43,
+   "jenis": "Sah",
+   "skor": 0,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 44,
+   "jenis": "Sah",
+   "skor": 6,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 45,
+   "jenis": "Sah",
+   "skor": 4,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 46,
+   "jenis": "Sah",
+   "skor": 20,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 47,
+   "jenis": "Sah",
+   "skor": 20,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 48,
+   "jenis": "Sah",
+   "skor": 0,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 49,
+   "jenis": "Sah",
+   "skor": 7,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 50,
+   "jenis": "Sah",
+   "skor": 12,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 51,
+   "jenis": "Sah",
+   "skor": 4,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 52,
+   "jenis": "Sah",
+   "skor": 33,
+   "status": "WASPADA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 53,
+   "jenis": "Sah",
+   "skor": 30,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 54,
+   "jenis": "Sah",
+   "skor": 0,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 55,
+   "jenis": "Sah",
+   "skor": 20,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 56,
+   "jenis": "Sah",
+   "skor": 31,
+   "status": "WASPADA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 57,
+   "jenis": "Sah",
+   "skor": 0,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 58,
+   "jenis": "Sah",
+   "skor": 4,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 59,
+   "jenis": "Sah",
+   "skor": 31,
+   "status": "WASPADA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 60,
+   "jenis": "Sah",
+   "skor": 9,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 61,
+   "jenis": "Sah",
+   "skor": 10,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 62,
+   "jenis": "Sah",
+   "skor": 0,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 63,
+   "jenis": "Sah",
+   "skor": 8,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 64,
+   "jenis": "Sah",
+   "skor": 6,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 65,
+   "jenis": "Sah",
+   "skor": 0,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 66,
+   "jenis": "Sah",
+   "skor": 8,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 67,
+   "jenis": "Sah",
+   "skor": 5,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 68,
+   "jenis": "Sah",
+   "skor": 0,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 69,
+   "jenis": "Sah",
+   "skor": 30,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 70,
+   "jenis": "Sah",
+   "skor": 0,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 71,
+   "jenis": "Sah",
+   "skor": 31,
+   "status": "WASPADA",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 72,
+   "jenis": "Sah",
+   "skor": 0,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 73,
+   "jenis": "Sah",
+   "skor": 7,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 74,
+   "jenis": "Sah",
+   "skor": 7,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 75,
+   "jenis": "Sah",
+   "skor": 7,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 76,
+   "jenis": "Sah",
+   "skor": 4,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 77,
+   "jenis": "Sah",
+   "skor": 5,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 78,
+   "jenis": "Sah",
+   "skor": 8,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 79,
+   "jenis": "Sah",
+   "skor": 0,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  },
+  {
+   "no": 80,
+   "jenis": "Sah",
+   "skor": 27,
+   "status": "AMAN",
+   "hasil": "Gagal"
+  }
+ ]
+}

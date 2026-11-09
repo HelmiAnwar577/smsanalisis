@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Hasil Analisis — SMS Defender</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+<div class="bg-orb orb-1"></div>
+<div class="bg-orb orb-2"></div>
+
+<div class="container result-container">
+
+  <div class="topbar">
+    <a href="/" class="logo-mini">
+      <div class="logo-mini-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      </div>
+      <div class="logo-mini-text">SMS<span>Defender</span></div>
+    </a>
+    <a href="/" class="back-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      Analisis Baru
+    </a>
+  </div>
+
+  {% set warna = risk_details.warna | default('green') %}
+  <div class="risk-hero {{ warna }}">
+    <div class="risk-label">Skor Risiko Penipuan SMS</div>
+    <div class="risk-score">
+      {{ risk_details.score | default(0) }}<span class="risk-unit">/100</span>
+    </div>
+    <div class="risk-status">{{ risk_details.status | default('TIDAK DIKETAHUI') }}</div>
+    <div class="meter-wrap">
+      <div class="meter-track">
+        <div class="meter-fill" id="meter-fill" style="width: 0%"></div>
+      </div>
+      <div class="meter-labels">
+        <span>AMAN (0)</span>
+        <span>WASPADA (31)</span>
+        <span>BERBAHAYA (66)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card glass-panel">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="card-header-icon">✨</span>
+      <span class="card-header-title">Analisis &amp; Rekomendasi AI</span>
+      <span class="card-toggle open">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+    <div class="card-body">
+      <div class="narrative-saran">{{ risk_details.saran | default('Tidak ada saran.') }}</div>
+      {% if risk_details.rincian %}
+      <div class="rincian-title">Rincian Deteksi:</div>
+      <ul class="rincian-list">
+        {% for item in risk_details.rincian %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="card glass-panel">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="card-header-icon">📊</span>
+      <span class="card-header-title">Breakdown Skor</span>
+      <span class="pill pill-blue">{{ risk_details.all_flags | selectattr('weight', 'gt', 0) | list | length }} trigger aktif</span>
+      <span class="card-toggle open">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+    <div class="card-body">
+      {% if risk_details.breakdown %}
+        {% for key, comp in risk_details.breakdown.items() %}
+        <div class="breakdown-row">
+          <div class="breakdown-top">
+            <span>{{ comp.label }}</span>
+            <span class="breakdown-score">{{ comp.score }} / {{ comp.max }}</span>
+          </div>
+          {% if comp.flags %}
+          <div class="breakdown-flags">
+            {% for flag in comp.flags %}
+            <span class="flag-chip">{{ flag.label }} {% if flag.weight > 0 %}(+{{ flag.weight }}){% else %}(info){% endif %}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+  
+  {% if sms_preview %}
+  <div class="card glass-panel">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="card-header-icon">💬</span>
+      <span class="card-header-title">Konten SMS Asli</span>
+      <span class="card-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+    <div class="card-body collapsed">
+      <div class="email-preview">{{ sms_preview.body_snippet or sms_preview.full_snippet }}</div>
+    </div>
+  </div>
+  {% endif %}
+
+  <footer>
+    SMS Defender v{{ version | default('6.1') }} · Naive Bayes Classifier + Skoring Risiko + Penjelasan Generative AI<br>
+    © 2026 — Riset Deteksi Smishing
+  </footer>
+</div>
+
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const scoreString = "{{ risk_details.score | default(0) }}";
+      const finalScore = parseInt(scoreString) || 0;
+      const meterFill = document.getElementById('meter-fill');
+      if (meterFill) {
+        meterFill.style.width = finalScore + '%';
+      }
+    }, 200);
+  });
+
+  function toggleCard(header) {
+    const body   = header.nextElementSibling;
+    const toggle = header.querySelector('.card-toggle');
+    body.classList.toggle('collapsed');
+    toggle.classList.toggle('open');
+  }
+</script>
+</body>
+</html>

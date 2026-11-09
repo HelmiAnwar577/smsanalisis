@@ -1,0 +1,11 @@
+No,Jenis SMS,NB,S_A,S_B,S_C,S_D,S_E,Skor,Status,Hasil,Indikator aktif
+1,Penipuan: subsidi BPJS,0.05,0,31,0,0,0,31,Waspada,Sesuai,Peniruan nama merek pada tautan — bpjs (domain)
+2,Penipuan: kurir + APK,0.28,35,40,0,0,0,75,Berbahaya,Sesuai,"Kata kunci mendesak/penipuan — Terdeteksi: kurir, paket, resi; Tautan pada pesan tak dikenal — Berisi tautan + bahasa manipulatif; File payload berbahaya (.apk dsb) — .apk; Peniruan nama merek pada tautan — sicepat (domain)"
+3,Penipuan: bank Mandiri,0.0,35,35,0,0,0,70,Berbahaya,Sesuai,Kata kunci mendesak/penipuan — Terdeteksi: tutup; Tautan pada pesan tak dikenal — Berisi tautan + bahasa manipulatif; Peniruan nama merek pada tautan — mandiri (path tautan pendek); URL shortener terdeteksi — bit.ly
+4,Penipuan: anak minta transfer,0.89,20,0,0,0,31,51,Waspada,Sesuai,"Kata kunci mendesak/penipuan — Terdeteksi: tolong, transfer; Gaya bahasa penipuan, tanpa tautan (NB: 89.2%)"
+5,Penipuan: undian Shopee,1.0,20,0,0,0,35,55,Waspada,Sesuai,"Kata kunci mendesak/penipuan — Terdeteksi: hadiah, menang, undian; Gaya bahasa penipuan, tanpa tautan (NB: 100.0%)"
+6,Sah: kode verifikasi,0.0,0,0,0,0,0,0,Aman,Sesuai,Pesan transaksional (OTP/nominal) tanpa tautan — bobot AI dikecilkan — Terdapat OTP/PIN/nominal tanpa tautan
+7,Sah: notifikasi pembayaran,0.33,0,0,0,0,0,0,Aman,Sesuai,Pesan transaksional (OTP/nominal) tanpa tautan — bobot AI dikecilkan — Terdapat OTP/PIN/nominal tanpa tautan
+8,Sah: pesan pribadi,0.0,0,0,0,0,0,0,Aman,Sesuai,
+9,Sah: pengingat servis,0.07,0,0,0,0,0,0,Aman,Sesuai,
+10,Sah: pemberitahuan kurir,0.0,20,0,0,0,0,20,Aman,Sesuai,Kata kunci mendesak/penipuan — Terdeteksi: paket

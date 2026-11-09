@@ -1,0 +1,14 @@
+No,Skenario,Hasil yang diharapkan,Kesimpulan
+1,Membuka halaman utama,Form input SMS tampil,Berhasil
+2,Menekan Analisis tanpa teks,Ditolak dengan pesan peringatan,Berhasil
+3,Mengirim teks berisi spasi saja,Ditolak dengan pesan peringatan,Berhasil
+4,SMS pribadi tanpa tautan,"Skor 0, status Aman",Berhasil
+5,SMS kode OTP resmi,Status Aman; isi SMS tampil di bagian Konten SMS Asli,Berhasil
+6,SMS hadiah dengan tautan bit.ly tanpa http,Indikator pemendek tautan tampil di rincian skor; status Berbahaya,Berhasil
+7,SMS kurir dengan tautan berkas .apk,Indikator berkas berbahaya (.apk) tampil di rincian skor; status Berbahaya,Berhasil
+8,Tautan dengan domain punycode,Indikator homograph/punycode aktif,Berhasil
+9,SMS dengan tautan meniru merek (beda 1 huruf),Indikator peniruan merek aktif; status minimal Waspada,Berhasil
+10,SMS sangat panjang (3.500 karakter),Tetap diproses; pratinjau dipotong 3.000 karakter,Berhasil
+11,Layanan Gemini tidak tersedia,Narasi cadangan tampil; aplikasi tetap berjalan,Berhasil
+12,Aplikasi dijalankan dalam mode offline,Skor tetap dihitung tanpa reputasi domain dan redirect,Berhasil
+13,Membuka endpoint /health,JSON berisi status ok dan versi aplikasi,Berhasil

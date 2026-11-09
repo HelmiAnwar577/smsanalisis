@@ -1,0 +1,263 @@
+{
+  "data": {
+    "total_unik": 1142,
+    "latih": 913,
+    "uji": 229,
+    "kategori_total": {
+      "normal": 568,
+      "penipuan": 335,
+      "promo": 239
+    },
+    "kategori_uji": {
+      "normal": 113,
+      "penipuan": 67,
+      "promo": 49
+    },
+    "penipuan_uji": 67,
+    "bukan_penipuan_uji": 162,
+    "latih_akhir": 1003,
+    "vocab": 20714
+  },
+  "nb_model_baru": {
+    "TP": 56,
+    "FN": 11,
+    "FP": 7,
+    "TN": 155,
+    "akurasi": 0.9213973799126638,
+    "presisi": 0.8888888888888888,
+    "recall": 0.835820895522388,
+    "f1": 0.8615384615384616
+  },
+  "nb_model_lama": {
+    "TP": 55,
+    "FN": 12,
+    "FP": 65,
+    "TN": 97,
+    "akurasi": 0.6637554585152838,
+    "presisi": 0.4583333333333333,
+    "recall": 0.8208955223880597,
+    "f1": 0.5882352941176471
+  },
+  "nb_cv5": {
+    "akurasi": {
+      "rata2": 0.9702214050409868,
+      "sd": 0.00756745254482321
+    },
+    "presisi": {
+      "rata2": 0.9695480900132665,
+      "sd": 0.020762691776739717
+    },
+    "recall": {
+      "rata2": 0.9283582089552238,
+      "sd": 0.027358660865407995
+    },
+    "f1": {
+      "rata2": 0.9480666985337672,
+      "sd": 0.013741783770846177
+    }
+  },
+  "pemilihan_aturan": [
+    {
+      "nama": "A. Aturan v4 (NB x0,4 tanpa tautan)",
+      "params": {
+        "nb_min_score": null,
+        "nb_factor_no_url": 0.4,
+        "link_bonus_needs_evidence": false
+      },
+      "TP": 204,
+      "FN": 64,
+      "FP": 44,
+      "TN": 601,
+      "akurasi": 0.8817086527929902,
+      "presisi": 0.8225806451612904,
+      "recall": 0.7611940298507462,
+      "f1": 0.7906976744186046
+    },
+    {
+      "nama": "B. A + pengali 0,4 dihapus",
+      "params": {
+        "nb_min_score": null,
+        "nb_factor_no_url": 1.0,
+        "link_bonus_needs_evidence": false
+      },
+      "TP": 242,
+      "FN": 26,
+      "FP": 44,
+      "TN": 601,
+      "akurasi": 0.9233296823658269,
+      "presisi": 0.8461538461538461,
+      "recall": 0.9029850746268657,
+      "f1": 0.8736462093862816
+    },
+    {
+      "nama": "C. B + NB>=0,5 minimal 31 poin",
+      "params": {
+        "nb_min_score": 31,
+        "nb_factor_no_url": 1.0,
+        "link_bonus_needs_evidence": false
+      },
+      "TP": 243,
+      "FN": 25,
+      "FP": 46,
+      "TN": 599,
+      "akurasi": 0.9222343921139102,
+      "presisi": 0.8408304498269896,
+      "recall": 0.9067164179104478,
+      "f1": 0.8725314183123878
+    },
+    {
+      "nama": "D. C + bonus tautan butuh bukti kedua (v5)",
+      "params": {
+        "nb_min_score": 31,
+        "nb_factor_no_url": 1.0,
+        "link_bonus_needs_evidence": true
+      },
+      "TP": 241,
+      "FN": 27,
+      "FP": 9,
+      "TN": 636,
+      "akurasi": 0.9605695509309967,
+      "presisi": 0.964,
+      "recall": 0.8992537313432836,
+      "f1": 0.9305019305019305
+    }
+  ],
+  "sistem_uji": {
+    "Sistem lama (v4 + model Inggris)": {
+      "TP": 36,
+      "FN": 31,
+      "FP": 30,
+      "TN": 132,
+      "akurasi": 0.7336244541484717,
+      "presisi": 0.5454545454545454,
+      "recall": 0.5373134328358209,
+      "f1": 0.5413533834586466
+    },
+    "Heuristik saja (S_A+S_B, tanpa NB)": {
+      "TP": 27,
+      "FN": 40,
+      "FP": 12,
+      "TN": 150,
+      "akurasi": 0.7729257641921398,
+      "presisi": 0.6923076923076923,
+      "recall": 0.40298507462686567,
+      "f1": 0.5094339622641509
+    },
+    "Naive Bayes saja": {
+      "TP": 56,
+      "FN": 11,
+      "FP": 7,
+      "TN": 155,
+      "akurasi": 0.9213973799126638,
+      "presisi": 0.8888888888888888,
+      "recall": 0.835820895522388,
+      "f1": 0.8615384615384616
+    },
+    "Sistem gabungan v5": {
+      "TP": 54,
+      "FN": 13,
+      "FP": 7,
+      "TN": 155,
+      "akurasi": 0.9126637554585153,
+      "presisi": 0.8852459016393442,
+      "recall": 0.8059701492537313,
+      "f1": 0.84375
+    }
+  },
+  "sistem_per_tautan": {
+    "lama": {
+      "dengan_tautan": {
+        "terdeteksi": 28,
+        "total": 29
+      },
+      "tanpa_tautan": {
+        "terdeteksi": 8,
+        "total": 38
+      }
+    },
+    "v5": {
+      "dengan_tautan": {
+        "terdeteksi": 27,
+        "total": 29
+      },
+      "tanpa_tautan": {
+        "terdeteksi": 27,
+        "total": 38
+      }
+    }
+  },
+  "sebaran_v5": {
+    "normal": {
+      "AMAN": 108,
+      "WASPADA": 5,
+      "BERBAHAYA": 0
+    },
+    "penipuan": {
+      "AMAN": 13,
+      "WASPADA": 29,
+      "BERBAHAYA": 25
+    },
+    "promo": {
+      "AMAN": 47,
+      "WASPADA": 1,
+      "BERBAHAYA": 1
+    }
+  },
+  "sebaran_lama": {
+    "normal": {
+      "AMAN": 110,
+      "WASPADA": 3,
+      "BERBAHAYA": 0
+    },
+    "penipuan": {
+      "AMAN": 31,
+      "WASPADA": 10,
+      "BERBAHAYA": 26
+    },
+    "promo": {
+      "AMAN": 22,
+      "WASPADA": 22,
+      "BERBAHAYA": 5
+    }
+  },
+  "kestabilan_100_split": {
+    "nb_f1": {
+      "rata2": 0.9464567469237829,
+      "sd": 0.017325459748990787,
+      "min": 0.90625,
+      "maks": 0.9850746268656716,
+      "nilai_seed_43": 0.921875,
+      "persentil_seed_43": 7.000000000000001
+    },
+    "sistem_f1": {
+      "rata2": 0.9367795363283054,
+      "sd": 0.01973332484121434,
+      "min": 0.890625,
+      "maks": 0.9774436090225563,
+      "nilai_seed_43": 0.9047619047619048,
+      "persentil_seed_43": 4.0
+    }
+  },
+  "data_inggris_cv_latih": {
+    "Indonesia saja": {
+      "TP": 244,
+      "FN": 24,
+      "FP": 8,
+      "TN": 637,
+      "akurasi": 0.9649507119386638,
+      "presisi": 0.9682539682539683,
+      "recall": 0.9104477611940298,
+      "f1": 0.9384615384615385
+    },
+    "Indonesia + Inggris": {
+      "TP": 259,
+      "FN": 9,
+      "FP": 62,
+      "TN": 583,
+      "akurasi": 0.9222343921139102,
+      "presisi": 0.8068535825545171,
+      "recall": 0.9664179104477612,
+      "f1": 0.8794567062818336
+    }
+  }
+}

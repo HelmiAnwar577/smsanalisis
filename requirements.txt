@@ -1,0 +1,13 @@
+# SMS Defender v5.0 — paket yang dipakai langsung oleh kode
+flask
+python-dotenv
+gunicorn
+requests
+urllib3
+python-whois
+idna
+google-generativeai
+scikit-learn
+pandas
+numpy
+joblib
